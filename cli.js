@@ -2,6 +2,7 @@
 
 var path = require('path')
 var fs = require('fs')
+var os = require('os')
 var program = require('commander')
 var ini = require('git-config-ini')
 var echo = require('node-echo')
@@ -9,7 +10,7 @@ var extend = require('extend')
 
 var proxies = require('./proxies.json')
 var PKG = require('./package.json')
-var GPHMRC = path.join(process.env.HOME, '.gphmrc')
+var GPHMRC = path.join(os.homedir(), '.gphmrc')
 var GITCONFIG = path.join('.git', 'config')
 
 program
